@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/greet.css">
+    <title>Greetings</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2><u>Greetings</u></h2>
+
+        <form action="/greet" method="POST">
+            name
+            <input type="text" name="userName" class="nameEntered" placeholder="enter your name">
+            <br><br>
+
+            <div class="message">{{name}}</div>
+            <div class="counter">{{count}}</div>
+
+
+            <div class="languages">
+                <input type="radio" name="languageType" class="languageType" value="English">
+                <span class="label-body">English</span>
+                <input type="radio" name="languageType" class="languageType" value="Afrikaans">
+                <span class="label-body">Afrikaans</span>
+                <input type="radio" name="languageType" class="languageType" value="IsiXhosa">
+                <span class="label-body">IsiXhosa</span>
+                <br><br>
+
+            </div>
+            	<a href="/greeted">Names</a>
+
+            <div class="greetBtn">
+                <button type="submit">greet</button>
+
+
+            </div>
+        </form>
+</body>
+
+</html>
