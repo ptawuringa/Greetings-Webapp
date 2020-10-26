@@ -1,11 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/greet.css">
+    <title>Greetings</title>
+</head>
+
 {{#if messages.info}}
 <div class="flash-box">
-<div class="entry">
-    <h1> {{messages.info}}</h1>
+    <div class="entry">
+        <h1> {{messages.info}}</h1>
+    </div>
 </div>
-</div>
+{{/if}}
+<body>
+    {{{body}}}
+</body>
 
-.
-
-{{{body}}}
-
+</html>
