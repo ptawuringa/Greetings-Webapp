@@ -47,7 +47,7 @@ const connectionString = process.env.DATABASE_URL || 'postgresql://patience:code
 
 const pool = new Pool({
     connectionString,
-    ssl: useSSL
+ //   ssl: useSSL
 });
 const greeted = greeting(pool)
 
