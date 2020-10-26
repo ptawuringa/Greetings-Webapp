@@ -1,3 +1,14 @@
 language: node_js
-node_js:
-  - 12.18.3
+
+env:
+  - DATABASE_URL=postgresql://postgresql://patience:codex123@localhost:5432/greeting
+
+node_js:  
+  - "12.18.3"
+
+before_script:
+  - psql -c 'create database  greeting;' -U postgres
+  - psql -U postgres -d greeting -a -f database.sql
+
+services:
+  - postgresql

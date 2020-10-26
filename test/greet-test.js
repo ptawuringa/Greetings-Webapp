@@ -10,7 +10,7 @@ const connectionString = process.env.DATABASE_URL || 'postgresql://patience:code
 
 const pool = new Pool({
     connectionString
-});
+})
 
 
 describe('The basic database web app', function () {
