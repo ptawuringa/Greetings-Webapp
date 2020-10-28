@@ -16,12 +16,14 @@
             name
             <input type="text" name="userName" class="nameEntered" placeholder="enter your name">
 
-            <div class="counter">{{count}}</div>
+            <h1>
+                <div class="counter">{{count}}</div>
+            </h1>
             <br><br>
 
-            <div class="message">{{messages.info}}</div>
-
-
+            <h1>
+                <div class="message">{{messages.info}}</div>
+            </h1>
 
 
             <div class="languages">
@@ -34,7 +36,6 @@
                 <br><br>
 
             </div>
-            <a href="/greeted">Names</a>
 
             <div class="greetBtn">
                 <button type="submit">greet</button>
@@ -44,12 +45,15 @@
             <div class="msg">{{name}}</div>
 
         </form>
-        <br><br>
+        <br>
         <div class="reset">
             <form action="/reset" method="get">
 
                 <button><a href="/reset"></a>Reset</button>
         </div>
+
+       <h1><center> <a href="/greeted">Names</a> </center></h1>
+
     </div>
 
     </form>

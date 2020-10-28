@@ -57,6 +57,9 @@ background-color: royalblue;
   margin: 10px 0;
 }
 
+
+h1 {text-align: center;}
+
 .form-inline {
   flex-direction: column;
   align-items: stretch;

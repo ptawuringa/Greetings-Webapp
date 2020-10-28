@@ -30,7 +30,7 @@ describe('The basic database web app', function () {
     });
 
     it('should able to update the persons counter when name is inserted more than one ', async function () {
-        // assemble
+
         const greetInstance = greet(pool)
 
         await greetInstance.selectAndUpdate('Makho')
@@ -43,7 +43,7 @@ describe('The basic database web app', function () {
     });
 
     it('should able to count how many name are being entered', async function () {
-        // assemble
+
         const greetInstance = greet(pool)
 
         await greetInstance.selectAndUpdate('Makho')
@@ -55,7 +55,7 @@ describe('The basic database web app', function () {
     });
 
     it('should able to get username', async function () {
-        // assemble
+
         const greetInstance = greet(pool)
 
         await greetInstance.selectAndUpdate("Tinashe")
