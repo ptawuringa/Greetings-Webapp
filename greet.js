@@ -39,6 +39,8 @@ module.exports = function greet(pool) {
 
 
     async function selectAndUpdate(name) {
+        name = name.toUpperCase().charAt(0) + name.slice(1)
+
         let results = await pool.query('SELECT name FROM greet WHERE name = $1', [name]);
         if (results.rows.length > 0) {
             await update(name)
@@ -49,15 +51,11 @@ module.exports = function greet(pool) {
     }
 
     async function update(name) {
+        
         return pool.query('UPDATE greet SET count=count+1 WHERE name =$1 ', [name]);
     }
 
-    async function deleteOne() {
-        let dltOne = await pool.query('delete FROM greet');
-        console.log(dltOne.rows)
-        return dltOne.rows;
-    }
-
+   
 
     function errorMessage(name, languageType) {
         if (!name) {
@@ -77,6 +75,11 @@ module.exports = function greet(pool) {
         return count.rowCount;
     }
 
+    async function deleteOne() {
+        let dltOne = await pool.query('delete FROM greet');
+        console.log(dltOne.rows)
+        return dltOne.rows;
+    }
 
 
     return {

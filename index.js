@@ -6,6 +6,7 @@ const greeting = require('./greet')
 const greetingRoutes = require('./routes')
 
 
+
 const exphbs = require('express-handlebars');
 
 const pg = require("pg");
@@ -33,7 +34,7 @@ app.use(session({
 app.use(flash());
 
 
-app.engine('handlebars', exphbs({ defaultLayout: null }));
+app.engine('handlebars', exphbs({ layoutsDir: "./views/layouts/" }));
 app.set('view engine', 'handlebars');
 
 app.use(express.static("public"));

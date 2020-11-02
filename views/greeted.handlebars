@@ -1,8 +1,35 @@
+ <center><h1>Counter</h1></center>
+
 {{#each greeted}}
-<h1>
-<li><a href="/counter/{{{this.name}}}">{{{this.name}}}</a></li></h1>
+<center>
+
+<h3>
+<li><a href="/counter/{{{this.name}}}">{{{this.name}}}</a></li></center></h3>
+
+<script>
+function goBack() {
+  window.history.back()
+}
+</script>
 
 {{/each}}
+
+<center>
+   
+<button onclick="goBack()">Go Back</button></center>
+
+<style>
+body {
+  background-color: lightcoral;
+}
+
+h1 {
+  color: rgb(54, 51, 51);
+  margin-left: 40px;
+} 
+
+
+</style>
 
 
 

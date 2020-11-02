@@ -1,64 +1,65 @@
-<!DOCTYPE html>
-<html lang="en">
+<div class="container">
+    <h2><u>Greetings</u></h2>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/greet.css">
-    <title>Greetings</title>
-</head>
+    <form action="/greet" method="POST">
+        name
+        <input type="text" name="userName" class="nameEntered" placeholder="enter your name">
 
-<body>
-    <div class="container">
-        <h2><u>Greetings</u></h2>
+        <h3>
+            <div class="counter">{{count}}</div>
+        </h3>
 
-        <form action="/greet" method="POST">
-            name
-            <input type="text" name="userName" class="nameEntered" placeholder="enter your name">
-
-            <h1>
-                <div class="counter">{{count}}</div>
-            </h1>
-            <br><br>
-
-            <h1>
-                <div class="message">{{messages.info}}</div>
-            </h1>
-
-
-            <div class="languages">
-                <input type="radio" name="languageType" class="languageType" value="English">
-                <span class="label-body">English</span>
-                <input type="radio" name="languageType" class="languageType" value="Afrikaans">
-                <span class="label-body">Afrikaans</span>
-                <input type="radio" name="languageType" class="languageType" vamsglue="IsiXhosa">
-                <span class="label-body">IsiXhosa</span>
-                <br><br>
-
-            </div>
-
-            <div class="greetBtn">
-                <button type="submit">greet</button>
-
-            </div>
-
-            <div class="msg">{{name}}</div>
-
-        </form>
         <br>
-        <div class="reset">
-            <form action="/reset" method="get">
 
-                <button><a href="/reset"></a>Reset</button>
+        <div class="error">
+            <h3>
+                {{messages.info}}
+
+            </h3>
         </div>
 
-       <h1><center> <a href="/greeted">Names</a> </center></h1>
+        <div class="languages">
 
-    </div>
+            <input type="radio" name="languageType" class="languageType" value="English">
+            <span class="label-body">English</span>
+            <input type="radio" name="languageType" class="languageType" value="Afrikaans">
+            <span class="label-body">Afrikaans</span>
+            <input type="radio" name="languageType" class="languageType" vamsglue="IsiXhosa">
+            <span class="label-body">IsiXhosa</span>
+            <br><br>
+
+        </div>
+
+        <div class="greetBtn">
+            <button type="submit">greet</button>
+
+        </div>
+
+        <br>
+
+        <centre>
+            <div class="msg">{{name}}</div>
+        </centre>
+
+        <br>
+
+        <div>
+
+            <h1>
+                <center> <a href="/greeted">Names</a> </center>
+            </h1>
+
+        </div>
 
     </form>
 
 
-</body>
 
-</html>
+</div>
+<div class="reset">
+    <form action="/reset" method="get">
+
+        <button>Reset</button>
+    </form>
+
+</div>
