@@ -61,7 +61,10 @@ background-color: royalblue;
 
 .reset{
   text-align: center;
-  flex-flow: column-reverse;
+  /* display: flex; */
+  /* float:right ; */
+  display:block;
+  
 
 }
 
@@ -73,6 +76,23 @@ background-color: royalblue;
 .error{
   color: red;
 }
+
+.counter{
+  float:right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
