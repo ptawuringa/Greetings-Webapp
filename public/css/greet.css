@@ -64,6 +64,10 @@ background-color: royalblue;
   /* display: flex; */
   /* float:right ; */
   display:block;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   
 
 }
@@ -79,6 +83,10 @@ background-color: royalblue;
 
 .counter{
   float:right;
+}
+
+.msg{
+  text-align: center;
 }
 
 
