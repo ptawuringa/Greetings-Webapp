@@ -4,7 +4,7 @@ module.exports = function greetingRoutes(greeted) {
     const app = async function (req, res) {
         var name = req.body.userName;
         var lang = req.body.languageType;
-
+        let msg
 
         if (name === "") {
 
@@ -12,10 +12,12 @@ module.exports = function greetingRoutes(greeted) {
 
         } else if (lang === undefined) {
             req.flash('info', 'ERROR,Please select your langauge');
-        } else {
+        } else if(!(/[a-zA-Z]/.test(name))){
+            req.flash('info', 'enter proper name')
+        }else{
 
             await greeted.selectAndUpdate(name);
-            let msg = await greeted.greetMe(name, lang)
+             msg = await greeted.greetMe(name, lang)
 
 
         }
@@ -23,7 +25,7 @@ module.exports = function greetingRoutes(greeted) {
 
 
         res.render('index', {
-            name: await greeted.greetMe(name, lang),
+            name: msg,
             count: await greeted.nameCount(),
 
 
