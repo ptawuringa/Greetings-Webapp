@@ -9,8 +9,8 @@ module.exports = function greet(pool) {
     }
 
 
-    function greetMe(name, languageType) {
-        name = name.toUpperCase().charAt(0) + name.slice(1)
+    function greetMe(names, languageType) {
+        var name = names.toUpperCase().charAt(0) + names.slice(1).toLowerCase()
         if (languageType === 'English') {
             return "Hello " + name;
 
@@ -38,8 +38,8 @@ module.exports = function greet(pool) {
     }
 
 
-    async function selectAndUpdate(name) {
-        name = name.toUpperCase().charAt(0) + name.slice(1)
+    async function selectAndUpdate(names) {
+        var name = names.toUpperCase().charAt(0) + names.slice(1).toLowerCase()
 
         let results = await pool.query('SELECT name FROM greet WHERE name = $1', [name]);
         if (results.rows.length > 0) {
