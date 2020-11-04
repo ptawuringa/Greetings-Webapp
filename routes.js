@@ -13,7 +13,7 @@ module.exports = function greetingRoutes(greeted) {
         } else if (lang === undefined) {
             req.flash('info', 'ERROR,Please select your langauge');
         } else if(!(/[a-zA-Z]/.test(name))){
-            req.flash('info', 'enter proper name')
+            req.flash('info', 'Enter proper name')
         }else{
 
             await greeted.selectAndUpdate(name);
@@ -32,6 +32,10 @@ module.exports = function greetingRoutes(greeted) {
         })
 
     };
+
+    const home = function(req,res){
+        res.render ('index')
+    }
 
     const name = async function (req, res) {
 
@@ -71,7 +75,8 @@ module.exports = function greetingRoutes(greeted) {
         name,
         one,
         getapp,
-        countname
+        countname,
+        home
     }
 
 

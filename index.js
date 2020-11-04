@@ -67,7 +67,7 @@ app.get("/reset", greetings.one);
 
 app.get('/greeted', greetings.getapp);
 
-
+app.get('/',greetings.home);
 
 app.get("/counter/:username", greetings.countname);
 
